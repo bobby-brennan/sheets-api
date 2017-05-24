@@ -3,7 +3,7 @@ paths:
     get:
       action: ./retrieve
     post:
-      action: ./create
+      action: ./create4.js
   '/pets/{id}':
     get:
       action: ./retrieve
