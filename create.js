@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 let datafire = require('datafire');
 let spreadsheet = require('./spreadsheet');
 let sheets = require('@datafire/google_sheets').actions;
