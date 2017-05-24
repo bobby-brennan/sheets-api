@@ -8,15 +8,15 @@ const PAGE_SIZE = 10;
 
 module.exports = new datafire.Action({
   inputs: [{
-    title: 'id',
-    type: 'integer',
+    title: "id",
+    type: "integer",
     default: 0,
-    description: "The ID of the item to get",
+    description: "The ID of the item to get"
   }, {
-    title: 'page',
-    type: 'integer',
+    title: "page",
+    type: "integer",
     minimum: 1,
-    default: 1,
+    default: 1
   }],
   inputSchema: {
     properties: {
@@ -47,10 +47,10 @@ module.exports = new datafire.Action({
         }
         context.accounts.google_sheets = context.accounts.sheetsOwner;
         return sheets.spreadsheets.values.batchGet({
-            spreadsheetId: spreadsheet.id,
-            ranges: ranges,
-            valueRenderOption: 'UNFORMATTED_VALUE',
-          }, context)
+          spreadsheetId: spreadsheet.id,
+          ranges: ranges,
+          valueRenderOption: 'UNFORMATTED_VALUE',
+        }, context);
       })
       .then(rows => {
         let pets = rows.valueRanges
@@ -67,6 +67,6 @@ module.exports = new datafire.Action({
         }
         return input.id ? pets[0] : pets;
       })
-  }
+  },
 });
 

@@ -4,7 +4,6 @@ paths:
       action: ./retrieve
     post:
       action: ./create
-  /pets/{id}:
+  '/pets/{id}':
     get:
       action: ./retrieve
-

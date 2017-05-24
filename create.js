@@ -18,8 +18,8 @@ module.exports = new datafire.Action({
           valueInputOption: 'USER_ENTERED',
           body: {
             values: [row],
-          }
-        }, context)
+          },
+        }, context);
       })
       .then(item => {
         let range = item.updates.updatedRange;
@@ -29,5 +29,5 @@ module.exports = new datafire.Action({
       .then(id => {
         return retrieve.run({id}, context);
       })
-  }
+  },
 })
